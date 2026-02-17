@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuclear Energy Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>NUCLEAR ENERGY SIMULATOR</h1>
+    <p class="subtitle">Strategic decision-making for nuclear energy programs</p>
+  </header>
+
+  <div class="content">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-label">
+          <span>Environment</span>
+        </div>
+        <div class="bar">
+          <div id="envBar" class="fill env-fill"></div>
+        </div>
+        <div class="stat-value" id="envValue">50%</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-label">
+          <span>Social Trust</span>
+        </div>
+        <div class="bar">
+          <div id="socBar" class="fill social-fill"></div>
+        </div>
+        <div class="stat-value" id="socValue">50%</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-label">
+          <span>Economy</span>
+        </div>
+        <div class="bar">
+          <div id="ecoBar" class="fill economy-fill"></div>
+        </div>
+        <div class="stat-value" id="ecoValue">50%</div>
+      </div>
+    </div>
+
+    <div class="scenario-section">
+      <p id="scenario" class="scenario-text"></p>
+      <img id="scenarioImg" src="" alt="scenario image" class="scenario-img">
+    </div>
+
+    <div class="action-buttons">
+      <button id="btn0" class="action-btn"></button>
+      <button id="btn1" class="action-btn"></button>
+      <button id="btn2" class="action-btn"></button>
+    </div>
+  </div>
+
+  <div id="explainBox" class="modal-overlay" style="display:none;">
+    <div class="modal-content">
+      <h2>Analysis</h2>
+      <p id="explainText"></p>
+      <button class="continue-btn" onclick="closeExplain()">Continue</button>
+    </div>
+  </div>
+
+  <div id="gameOverBox" class="modal-overlay" style="display:none;">
+    <div class="modal-content game-over-content">
+      <h2>Program Terminated</h2>
+      <p id="gameOverReason"></p>
+      <button class="continue-btn" onclick="restartGame()">Restart Game</button>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button class="control-btn" onclick="connectSerial()">Connect Joystick</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
